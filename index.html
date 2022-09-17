@@ -1,4 +1,20 @@
-<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="나만의 알곡 만들기"/><link rel="apple-touch-icon" href="%PUBLIC_URL%/img.png"/><link rel="icon" href="img.png"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css"><title>나만의 알곡 만들기 | 말씀광장</title><script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script><style>@import url(https://cdn.rawgit.com/kattergil/NotoSerifKR-Web/76eb9ebf/stylesheet/NotoSerif-Web.css);
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta
+              name="description"
+              content="나만의 알곡 만들기"
+      />
+      <link rel="apple-touch-icon" href="%PUBLIC_URL%/img.png"/>
+    <link rel="icon" href="<%= BASE_URL %>img.png">
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css'>
+    <title>나만의 알곡 만들기 | 말씀광장</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <style>
+    @import url(https://cdn.rawgit.com/kattergil/NotoSerifKR-Web/76eb9ebf/stylesheet/NotoSerif-Web.css);
     @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
     @font-face {
         font-family: 'Jalnan';
@@ -30,7 +46,36 @@
       a{
           text-decoration: none;
           color: #333;
-      }</style><script defer="defer" src="js/chunk-vendors.8efabd5a.js"></script><script defer="defer" src="js/app.4ba1c59e.js"></script><link href="css/app.36a9adb9.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but matthias_grain doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div class="audio_area" style="display:none;"><div class="wrap"><figure><figcaption>Listen to the T-Rex:</figcaption><audio id="audio_id" controls src="./No.9_Esther’s Waltz - Esther Abrami.mp3">Your browser does not support the <code>audio</code> element.</audio></figure><div class="btn_area"><div class="switch"><img src="./soundon.png" class="music_off"> <img src="./soundoff.png" class="music_on"></div></div></div></div><div id="app"></div></body><script>var once=false;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div class="audio_area" style="display:none;">
+      <div class="wrap">
+          <figure>
+              <figcaption>Listen to the T-Rex:</figcaption>
+              <audio id="audio_id" controls src="./No.9_Esther’s Waltz - Esther Abrami.mp3">Your browser does not support the
+                      <code>audio</code> element.
+              </audio>
+          </figure>
+          <div class="btn_area">
+              <div class="switch">
+                <img src='./soundon.png' class="music_off">
+                <img src='./soundoff.png' class="music_on">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+    var once=false;
     $(document).on('click','body,html',function(e){
       
       if(!once){
@@ -64,4 +109,6 @@
         off.show();
         document.getElementById('audio_id').pause();
       }
-    })</script></html>
+    })
+  </script>
+</html>
